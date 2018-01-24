@@ -1,0 +1,51 @@
+
+Adafruit Accelerometer Specs:
+0.8 = 20.32  ~~ 21
+0.6 = 15.24  ~~ 
+0.1 = 2.54
+
+1 = 25.4
+
+ribbon - 12mm wide, 1.5? tall
+
+
+Wall thickness: 2mm (generous) 1mm (short spans)
+Clearance: 0.5mm
+Other design guidelines: https://www.shapeways.com/materials/pla
+
+
+M4 	
+-------------------
+	insert:
+	drill bit	 	5.6mm diameter
+	depth			8mm
+
+	Screw:
+	screw head 		8mm diameter
+	throughhole 	4mm diameter
+
+
+M3
+------------------
+	insert:
+	drill bit		4mm
+	depth			4.8mm
+
+	screw:
+	screw head		5.6mm
+	hole			3mm
+	flat chamfer	1.65mm
+
+
+M2
+-------------------
+	insert:
+	drill bit		3.2mm
+	depth			4mm w/ flange
+
+	screw:
+	screw head		4mm diameter
+	throughhole		2mm diameter
+
+
+0.1" = 2.54mm

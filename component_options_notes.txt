@@ -1,0 +1,146 @@
+Sensors!
+Pressure sensitive resistor - make a fabric/rubber/neoprene cover for the hand brake:
+
+Conductive sheet: https://www.adafruit.com/products/1361
+General purpose fabric sensor tutorials: https://cdn-shop.adafruit.com/datasheets/HandcraftingSensors.pdf
+Force Sensitive Resistor: https://www.adafruit.com/products/166
+Light up sneakers (example model of application of this): https://learn.adafruit.com/firewalker-led-sneakers/circuit-diagram?view=all
+Neoprene by the foot: http://www.seattlefabrics.com/neoprene.html#Neoprene
+
+
+
+
+Load Cells:
+http://www.robotshop.com/en/micro-load-cell-5-kg.html
+http://www.robotshop.com/en/sfe-load-sensor-50kg.html
+http://www.robotshop.com/en/button-load-cell-50kg.html
+With this breakout board: http://www.robotshop.com/en/strain-gauge-load-cell-amplifier-shield-2ch.html
+or this one: http://www.robotshop.com/en/hx711-load-cell-amplifier.html
+
+Bike lights that can be repurposed:
+http://www.dx.com/p/3-in-1-electronic-bike-horns-with-brake-light-and-turning-signals-3631#.WH5zjPkrKUk
+
+
+
+Attaching wires to bike:
+https://en.wikipedia.org/wiki/Self-amalgamating_tape
+https://www.amazon.com/Black-Shrink-Tubing-Sleeving-16-5Ft/dp/B00MJSZ65A/ref=sr_1_14?ie=UTF8&qid=1484243410&sr=8-14&keywords=heat+shrink+wrap
+
+
+Tutorials with micropython:
+https://learn.adafruit.com/micropython-hardware-i2c-devices
+https://learn.adafruit.com/micropython-hardware-pca9685-pwm-and-servo-driver
+
+
+Book that includes an accelerometer example and intro to micropython ($20)
+https://www.adafruit.com/products/3325
+
+
+pyboard - $45
+Has built in accelerometer
+https://www.adafruit.com/product/2390
+docs: http://docs.micropython.org/en/v1.8.4/pyboard/pyboard/tutorial/accel.html
+The sensor they use: http://micropython.org/resources/datasheets/MMA7660FC.pdf
+
+
+List of adafruit accelerometers:
+https://www.adafruit.com/search?q=accelerometer&
+Low cost 3-axis accelerometer only ($5): https://www.adafruit.com/products/2809
+mid cost 3-axis accelerometer ($8) : https://www.adafruit.com/products/2019  (and learn: https://learn.adafruit.com/adafruit-mma8451-accelerometer-breakout)
+Analog board 3-axis accelerometer ($15): https://www.adafruit.com/products/163
+9-DOF board ($20): https://www.adafruit.com/products/1714
+
+Adafruit question re: accelerometer w/ feather: https://forums.adafruit.com/viewtopic.php?f=45&t=91954
+http://adafru.it/2019
+
+Feather board - data logger
+https://www.adafruit.com/products/2796
+
+
+
+Soldering guide:
+https://learn.adafruit.com/adafruit-guide-excellent-soldering
+
+
+Triple-axis breakout accelerometer. SDK is written in C++ for arduino
+https://learn.adafruit.com/adafruit-lis3dh-triple-axis-accelerometer-breakout/overview
+
+Motorcycle version with flora:
+https://learn.adafruit.com/flora-brakelight-backpack
+
+Tutorials
+displays on micropython https://larsbergqvist.wordpress.com/2016/12/03/a-sensor-monitor-with-oled-in-micropython/
+micropython intro: https://larsbergqvist.wordpress.com/2016/09/07/micropython-and-esp8266/
+servos: https://learn.adafruit.com/micropython-hardware-pca9685-pwm-and-servo-driver
+Loading micropython onto ESP8266 (e.g. feather): https://learn.adafruit.com/micropython-basics-how-to-load-micropython-on-a-board
+
+
+Batteries
+https://www.adafruit.com/products/353
+
+
+
+
+
+Other handy/cool stuff:
+
+Storage boxes:
+https://www.adafruit.com/product/432
+
+
+
+
+
+
+
+
+
+
+
+
+
+McMaster
+3d printing 
+Screw to expand plastic inserts (probably M4?): https://www.mcmaster.com/#standard-threaded-inserts/=15yb49w
+	https://www.mcmaster.com/#standard-threaded-inserts/=160vmcj
+	
+	with flange: https://www.mcmaster.com/#standard-threaded-inserts/=15yb4wo
+	and matching screws: https://www.mcmaster.com/#standard-rounded-head-screws/=15yb8dq
+		or phillips head https://www.mcmaster.com/#standard-rounded-head-screws/=15yb9w7
+		(probably start w/ 8mm length? = 6mm depth + 2mm wall thickness + 2 mm gap )
+	
+	
+	or - appropriate thickness binding post: https://www.mcmaster.com/#binding-posts/=15yb5z0
+		and low prfile binding posts: https://www.mcmaster.com/#binding-posts/=15yb7bk
+		
+
+
+other stuff
+Size L (half way between M and L actually), Deerskin MIG welding gloves: https://www.mcmaster.com/#5371t3/=15yasf7
+High temp static-dissipative gloves: https://www.mcmaster.com/#gloves/=15yats5
+Fine-tip soldering iron: https://www.mcmaster.com/#soldering-irons/=15yauyn
+Ultra-flexible wire: https://www.mcmaster.com/#standard-electrical-wire/=15yavgp
+
+Modified curing chamber:
+Low carbon steel sheet, 8x8": https://www.mcmaster.com/#1388k17/=15yayw5
+Threaded stud: https://www.mcmaster.com/#standard-threaded-rods/=15yb2lx
+
+
+
+
+
+The Bike:
+Circumferences of tubing: 72mm, 100mm, 110mm
+Diameter of tubing: 22.9, 32mm, 35mm
+
+
+Braking forces
+http://www.sveafordon.com/media/36782/Olsson_Brake-PerfStab-for-Bicycles_130515_public.pdf
+
+
+waterproof enclosures
+http://freaklabs.org/index.php/tutorials/hardware/weatherproof-wireless-enclosure-build-tutorial.html
+
+
+3d printing
+Designing mechanical parts: https://www.shapeways.com/tutorials/designing_mechanical_parts_for_3d_printing

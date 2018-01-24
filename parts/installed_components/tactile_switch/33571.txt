@@ -1,0 +1,17 @@
+﻿"Symbol";"Value";"Unit";
+"SUPPLIER_NAME";"RS Components";"";
+"TraceParts.PartVersion";"1.0.7";"";
+"SUPPLIER";"Omron";"";
+"TraceParts.PartStatus";"Published";"";
+"RS_STOCK_NUMBER";"1031550";"";
+"REVISION";"A";"";
+"DESIGN";"Microswitch D2MQ-1L";"";
+"TraceParts.InstanceId";"10-12112013-12384916Q6UB57NY7S4JNERSQU3PP3D";"";
+"TraceParts.PartLanguage";"en";"";
+"TraceParts.PartTitle";"Microswitch D2MQ-1L";"";
+"TraceParts.PartNumber";"10-12112013-123849";"";
+"REFERENCE";"D2MQ-1L";"";
+"TIMESTAMP";"11/11/2013 12:03";"";
+"TRACEPARTS";"TRACEPARTS";"";
+"TraceParts.PartStatusId";"";"";
+"TraceParts.ClassPath";"RS_COMPONENTS:/F_RS_COMPONENTS/PSSS_428047/PSS_428054/PSF_428118/10-12112013-123849";"";
