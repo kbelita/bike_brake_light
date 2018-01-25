@@ -24,6 +24,11 @@ class MainGrid:
 		self.iic = I2C(2)  #SCL on bus 2, SDA on bus 2
 		self.matrix = ht.Matrix16x8(self.iic, address=0x70)
 
+		#Initialize to off
+		self.matrix.fill(0)
+		self.matrix.show()
+		self._status = 0
+
 		#edit individual pixels
 		#matrix.pixel(row,column,0) #off
 		#matrix.pixel(row,column,1) #on
@@ -32,8 +37,16 @@ class MainGrid:
 	def on(self):
 		self.matrix.fill(1)
 		self.matrix.show()
+		self._status = 1
 
-		
 	def off(self):
 		self.matrix.fill(0)
 		self.matrix.show()
+		self._status = 0
+
+	def toggle(self):
+		if self._status == 0:
+			self.on()
+		else:
+			self.off()
+	
