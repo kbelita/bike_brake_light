@@ -69,7 +69,8 @@ def main():
             log.write("pitch_degrees:{},roll_degrees:{},Time,X,Y,Z,Brake\n".format(pitch,roll))
 
             #Initialize some loop utility variables
-            previous_braking = brake_switch.value()
+            brake_lights.off() #make sure this matches previous_braking
+            previous_braking = 0
             last_save_t = pyb.millis() #initialize to now
 
             # until switch is pressed again
