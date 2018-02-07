@@ -5,16 +5,9 @@ bp.brakelight = Object.create(bp.base);
 bp.brakelight.extend({
     setup: function(container){ 
         var chart = this;
-        
-        //Run the boiler plate stuff first
         bp.base.setup.call(chart,container);
-
-        //Do custom stuff
-       
-
         return chart;
     },
-
     resize: function() {
         /*
         Perform graph specific resize functions, like adjusting axes
@@ -22,31 +15,25 @@ bp.brakelight.extend({
         DOM elements will typically be created in the _setup function
         */
         var chart = this
-
-        //Run the boiler plate stuff first
-        bp.base.resize.call(chart);
-
-        //Do custom stuff
-        
+        bp.base.resize.call(chart);        
         chart.instant_update()
     },
+    /**
+     * Draw the graph using the current data and settings. 
+     * This should draw the graph the first time, and is always run after both setup() and resize() are run
+     */
     update: function(data){
-        /*
-        Draw the graph using the current data and settings. 
-        This should draw the graph the first time, and is always run after both '_setup' and '_resize' are run
-        */
-
         var chart = this;
 
         //Run the boiler plate stuff first
         bp.base.update.call(chart, data);
 
-        
-        console.log(chart.barData());
-
         var xScale = d3.scaleLinear()
                 .domain([0,chart.data().length]) //data size is equivalent to the sum of all durations of each series
                 .range([0,chart.innerWidth()]) //pixels
+        var yScale = d3.scaleBand()
+                .domain(chart.field())
+                .range([0,chart.innerHeight()])
 
         //D3 update pattern:
         //Bind to existing bars, if they exist
@@ -56,18 +43,19 @@ bp.brakelight.extend({
 
         var newBars = bars.enter().append('rect')
                     .classed("values",true)
-                    .attr('x',function(d){return xScale(d.startPosition);})
-                    .attr('y', function(d){return (d.series =="actual") ? 0 : 100;})
-                    .attr('height',50)
-                    .attr('width',function(d){return xScale(d.duration)})
-                    .attr('fill',function(d){return (d.state==0) ? 'gray' : 'red';})
+                    .attr('x', function(d) { return xScale(d.startPosition);} )
+                    .attr('y', function(d) { return yScale(d.series)})
+                    .attr('height', function(d) { return yScale.bandwidth() } )
+                    .attr('width', function(d) { return xScale(d.duration) } )
+                    .attr('fill', function(d) { return (d.state==0) ? 'gray' : 'red';} )
+
+        //add labels
+        chart.svg.append("g")
+          .attr("transform", "translate(" + (chart.margin()['left']) + ",0)")
+          .call(d3.axisLeft(yScale));
 
         return chart;
     },
-   
-    //Calculated fields
-
-
     /**
      * Transform the data into the properties needed to draw the rectangles
      * Source data: one row = one observation with a specific state
@@ -84,7 +72,6 @@ bp.brakelight.extend({
        TODO make sure we're handling off-by-one errors with duration, start position, etc.
     */
     barData: function() {
-        console.log("calculating");
         var chart = this;
 
         //Temp variable for incrementing the length of each bar until state switch, at which point we 
@@ -129,7 +116,10 @@ bp.brakelight.extend({
         };
 
         //Save our last 'currentBars' (since comparison+save occurs on the following row, final row doesn't get saved)
-
+        for (var j = 0; j< chart.field().length; j++){
+            var f = chart.field()[j];
+            chart._barData.push(currentBars[f]);
+        };
 
 
         return chart._barData;
