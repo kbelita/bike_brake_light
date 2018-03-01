@@ -78,7 +78,10 @@ def main():
 
                 #Get the data and log it
                 t = pyb.millis()                            # get time
-                x, y, z = accel.filtered_xyz()              # get acceleration data
+                #x, y, z = accel.filtered_xyz()              # get acceleration data
+                x = accel.x()
+                y = accel.y()
+                z = accel.z()
                 braking = brake_switch.value()              # is brake switch triggered?
                 log.write('{},{},{},{},{},{},{}\n'.format('','',t,x,y,z,braking))  # write data to file
                 
