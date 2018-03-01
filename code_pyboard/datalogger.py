@@ -95,6 +95,7 @@ def main():
                         # toggle on the next switch press instead.
                         pass
 
+
                 #autosave the data in case of crash during long write function
                 if t > (last_save_t + 1000):
                     last_save_t = t
